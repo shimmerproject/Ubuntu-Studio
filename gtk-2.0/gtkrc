@@ -291,11 +291,11 @@ style "murrine-menu" = "murrine-wider"
 style "murrine-menubar"
 {
 	bg[NORMAL]= shade (0.75, @bg_color)
+	bg[PRELIGHT]   = shade (1.25, @bg_color)
+	bg[SELECTED]   = shade (1.25, @bg_color)
 	fg[PRELIGHT] = @selected_fg_color
 	engine "murrine" {
-	#	contrast			= 1.13
-	#	toolbarstyle			= 1
-	#	lightborder_shade		= 1.0
+		roundness			= 0
 		gradient_shades     		= {1.0,0.94,0.94,0.88}
 	}
 }
@@ -305,55 +305,6 @@ style "menubar-menuitem" = "murrine-wider"
 	bg[PRELIGHT] = shade (1.02, @selected_bg_color)
 	bg[SELECTED] = shade (1.02, @selected_bg_color)
 }
-
-#style "murrine-menu"
-#{
-	#ythickness        = 2
-	#xthickness        = 4
-#	GtkMenuBar	:: shadow-type		= GTK_SHADOW_NONE
-	
-#	bg[SELECTED]      = shade (0.85, @selected_bg_color)
-#	bg[NORMAL]        = @bg_color
-#	bg[PRELIGHT]      = shade (0.85, @selected_bg_color)
-#	bg[ACTIVE]        = @bg_color
-#	bg[INSENSITIVE]   = @bg_color
-#	fg[NORMAL]        = shade (1.15, @fg_color) # Color for normal text.
-#	fg[PRELIGHT]      = @selected_fg_color
-#	fg[SELECTED]      = shade (1.15, @fg_color)
-#	fg[ACTIVE]        = @selected_fg_color
-#	fg[INSENSITIVE]   = shade (0.75, @bg_color) # Text color for non-interactive menu items
-#	text[NORMAL]      = shade (1.15, @fg_color) # Color for menu-item radio/checks.
-#	base[NORMAL]      = @bg_color # Color for menu-item radio/checks background.
-#	text[PRELIGHT]    = @selected_fg_color
-#	text[SELECTED]    = @selected_fg_color
-#	text[ACTIVE]      = @selected_fg_color
-#	text[INSENSITIVE] = @text_color
-	
-#	engine "murrine" 
-#	{
-#		roundness = 0 # Roundness of menu items.
-#		contrast = 0.9
-#	}
-#}
-
-
-#style "murrine-menubar" = "murrine-menu" {
-#	bg[SELECTED]	= shade (0.7, @bg_color_dark)
-#}
-
-#style "menubar-menuitem"
-#{
-	#ythickness        = 2
-	#xthickness        = 4
-#	bg[PRELIGHT]   = @selected_bg_color
-#	bg[SELECTED]   = @selected_bg_color
-#	fg[NORMAL]     = @selected_fg_color
-#	fg[PRELIGHT]   = @selected_fg_color
-#	fg[SELECTED]   = @selected_fg_color
-#	text[NORMAL]   = @base_color
-#	text[PRELIGHT] = @selected_fg_color
-#	text[SELECTED] = @selected_fg_color
-#}
 
 style "menubar-menuitem-prelight"
 {
@@ -697,6 +648,3 @@ class "ChromeGtkFrame" style "chrome-gtk-frame"
 
 # panel theming
 include "apps/panel.rc"
-# application specific theming
-include "apps/terminal.rc"
-include "apps/thunar.rc"
